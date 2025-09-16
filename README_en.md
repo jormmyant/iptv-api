@@ -30,7 +30,7 @@ other features, under development...
 
 💖 [Channel Alias Collection Plan](https://github.com/Guovin/iptv-api/discussions/1082)
 
-- [✅ Features](#features)
+- [✅ Core Features](#core-features)
 - [🔗 Latest results](#latest-results)
 - [⚙️ Config parameter](#Config)
 - [🚀 Quick Start](#quick-start)
@@ -61,8 +61,6 @@ other features, under development...
 - [iptv-org/iptv](https://github.com/iptv-org/iptv)
 - [suxuang/myIPTV](https://github.com/suxuang/myIPTV)
 - [kimwang1978/collect-tv-txt](https://github.com/kimwang1978/collect-tv-txt)
-- [asdjkl6/tv](https://github.com/asdjkl6/tv)
-- [fanmingming/live](https://github.com/fanmingming/live)
 - [vbskycn/iptv](https://github.com/vbskycn/iptv)
 
 📍Channel icons are from:
@@ -71,20 +69,21 @@ other features, under development...
 
 </details>
 
-## Features
+## Core Features
 
-- ✅ Customizable templates, support for aliases, and generation of desired channels
-- ✅ Supports RTMP streaming (live/hls) to enhance playback experience
-- ✅ Supports multiple source acquisition methods: local source, multicast source, hotel source, subscription source,
-  keyword search
-- ✅ Support for playback interface retrieval and generation
-- ✅ Supports EPG functionality, displaying channel preview content
-- ✅ Interface speed verification, obtain delay, speed, resolution, filter invalid interface
-- ✅ Preferences: IPv4, IPv6, interface source sorting priority and quantity configuration, whitelist, blacklist,
-  location, and ISP filtering
-- ✅ Scheduled execution at 6:00 AM and 18:00 PM Beijing time daily
-- ✅ Supports various execution methods: workflows, command line, GUI software, Docker(amd64/arm64/arm v7)
-- ✨ For more features, see [Config parameter](#Config)
+| Feature                               | Status | Description                                                                                                |
+|:--------------------------------------|:------:|:-----------------------------------------------------------------------------------------------------------|
+| **Custom Templates**                  |   ✅    | Generate personalized channels as you wish                                                                 |
+| **Channel Aliases**                   |   ✅    | Improve channel result acquisition and accuracy                                                            |
+| **Multiple Source Types**             |   ✅    | Supports local sources, multicast, hotel sources, subscriptions, and keyword search                        |
+| **RTMP Streaming**                    |   ✅    | Supports Live and HLS modes to enhance live playback experience                                            |
+| **Playback Interfaces**               |   ✅    | Supports acquisition and generation of playback interfaces                                                 |
+| **EPG (Electronic Program Guide)**    |   ✅    | Displays channel preview content                                                                           |
+| **Interface Speed Test & Validation** |   ✅    | Measures latency, speed, resolution, and filters invalid interfaces                                        |
+| **Advanced Preferences**              |   ✅    | IPv4/IPv6, interface sorting priority, quantity configuration, blacklist/whitelist, region & ISP filtering |
+| **Scheduled Tasks**                   |   ✅    | Automatically updates at 6:00 and 18:00 Beijing time daily by default; customizable schedule               |
+| **Multiple Run Modes**                |   ✅    | Supports workflow, CLI, GUI software, Docker (amd64/arm64/arm v7)                                          |
+| **More Features**                     |   ✨    | See [Configuration Parameters](#Config) section for details                                                |
 
 ## Latest results
 
@@ -267,19 +266,20 @@ Taking the host path /etc/docker as an example:
 
 #### 3. Update Results
 
-| Endpoint  | Description           |
-|:----------|:----------------------|
-| /         | Default endpoint      |
-| /m3u      | m3u format endpoint   |
-| /txt      | txt format endpoint   |
-| /ipv4     | ipv4 default endpoint |
-| /ipv6     | ipv6 default endpoint |
-| /ipv4/txt | ipv4 txt endpoint     |
-| /ipv6/txt | ipv6 txt endpoint     |
-| /ipv4/m3u | ipv4 m3u endpoint     |
-| /ipv6/m3u | ipv6 m3u endpoint     |
-| /content  | Endpoint content      |
-| /log      | Speed test log        |
+| Endpoint        | Description                                     |
+|:----------------|:------------------------------------------------|
+| /               | Default endpoint                                |
+| /m3u            | m3u format endpoint                             |
+| /txt            | txt format endpoint                             |
+| /ipv4           | ipv4 default endpoint                           |
+| /ipv6           | ipv6 default endpoint                           |
+| /ipv4/txt       | ipv4 txt endpoint                               |
+| /ipv6/txt       | ipv6 txt endpoint                               |
+| /ipv4/m3u       | ipv4 m3u endpoint                               |
+| /ipv6/m3u       | ipv6 m3u endpoint                               |
+| /content        | Endpoint content                                |
+| /log/result     | Log of valid results                            |
+| /log/speed-test | Log of all interfaces involved in speed testing |
 
 - RTMP Streaming:
 
